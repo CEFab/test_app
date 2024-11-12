@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/common/color_extension.dart';
 import 'package:test_app/common_widget/round_button.dart';
+import 'package:test_app/screen/projects/addproject_screen.dart';
 
 class StartupScreen extends StatefulWidget {
   const StartupScreen({super.key});
@@ -48,7 +49,11 @@ class _StartupScreenState extends State<StartupScreen> {
             ),
           ),
           const Spacer(),
-          RoundButton(title: "Let's Start", onPressed: () {}),
+          RoundButton(
+              title: "Let's Start",
+              onPressed: () {
+                context.push(const AddprojectScreen());
+              }),
           const Spacer(),
         ],
       ),
